@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import OrderInfo from './OrderInfo';
 
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
         const fetchOrders = async () => {
-            const response = await axios.get('/api/order');
-            setOrders(response.data);
+            try {
+                const response = await axios.get('/api/order');
+                setOrders(response.data);
+            } catch (error) {
+                console.error("Ошибка при загрузке заказов:", error);
+            }
         };
         fetchOrders();
     }, []);
@@ -19,10 +24,9 @@ const OrderList = () => {
             <ul>
                 {orders.map((order) => (
                     <li key={order.id} className="order-list-item">
-                        <Link to={`/orders/${order.id}`}>
-                            {order.senderCity} → {order.recipientCity}
+                        <Link to={`/orders/${order.id}`} className="order-item-link">
+                            <OrderInfo order={order} />
                         </Link>
-                        <p>Дата забора: {new Date(order.pickupDate).toLocaleDateString()}</p>
                     </li>
                 ))}
             </ul>

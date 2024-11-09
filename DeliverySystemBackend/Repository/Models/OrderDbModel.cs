@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace DeliverySystemBackend.Repository.Models
 {
     public class OrderDbModel

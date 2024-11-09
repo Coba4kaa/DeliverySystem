@@ -17,7 +17,7 @@ namespace DeliverySystemBackend.Controller
             if (order is null)
                 return BadRequest("Order cannot be null.");
 
-            ValidationResult validationResult = await validator.ValidateAsync(order);
+            var validationResult = await validator.ValidateAsync(order);
             if (!validationResult.IsValid)
             {
                 var errors = validationResult.Errors.Select(e => e.ErrorMessage);

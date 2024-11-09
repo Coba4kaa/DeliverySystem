@@ -36,7 +36,7 @@ const OrderForm = () => {
 
         setTimeout(() => {
             setNotification('');
-        }, 3000);
+        }, 15000);
     };
 
     return (
@@ -95,7 +95,7 @@ const OrderForm = () => {
 
             {notification && (
                 <div className="notification"
-                     style={{marginTop: '20px', color: notification.includes('успешно') ? 'green' : 'red'}}>
+                     style={{color: notification.includes('успешно') ? 'green' : 'red'}}>
                     {notification}
                 </div>
             )}

@@ -8,22 +8,22 @@ namespace DeliverySystemBackend.Controller
         public OrderValidator()
         {
             RuleFor(order => order.SenderCity)
-                .NotEmpty().WithMessage("Город отправителя обязателен.");
+                .NotEmpty().WithMessage(" Город отправителя обязателен");
 
             RuleFor(order => order.SenderAddress)
-                .NotEmpty().WithMessage("Адрес отправителя обязателен.");
+                .NotEmpty().WithMessage(" Адрес отправителя обязателен");
 
             RuleFor(order => order.RecipientCity)
-                .NotEmpty().WithMessage("Город получателя обязателен.");
+                .NotEmpty().WithMessage(" Город получателя обязателен");
 
             RuleFor(order => order.RecipientAddress)
-                .NotEmpty().WithMessage("Адрес получателя обязателен.");
+                .NotEmpty().WithMessage(" Адрес получателя обязателен");
 
             RuleFor(order => order.Weight)
-                .GreaterThan(0).WithMessage("Вес груза должен быть положительным.");
+                .GreaterThan(0).WithMessage(" Вес груза должен быть положительным");
 
             RuleFor(order => order.PickupDate)
-                .GreaterThan(DateTime.UtcNow).WithMessage("Дата забора груза должна быть в будущем.");
+                .GreaterThan(DateTime.UtcNow).WithMessage(" Дата забора груза должна быть в будущем");
         }
     }
 }
