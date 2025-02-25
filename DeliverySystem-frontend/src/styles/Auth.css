@@ -1,0 +1,101 @@
+.auth-container {
+    width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    border: 3px solid rebeccapurple;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+
+    & h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    & form {
+        margin-top: 30px;
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center; 
+    }
+
+    & label {
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    & input {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid rebeccapurple;
+        border-radius: 5px;
+        outline: none;
+        width: 90%;
+        box-sizing: border-box;
+
+        &:focus {
+            border-color: #1abc9c;
+        }
+    }
+
+    & a {
+        display: inline-block;
+        margin-top: 25px;
+        text-decoration: none;
+        color: #2c3e50;
+        font-weight: bold;
+        transition: color 0.5s;
+        padding: 10px;
+        border-radius: 8px;
+        border: 2px solid #2c3e50;
+        background-color: white;
+
+        &:hover {
+            color: #1abc9c;
+        }
+    }
+
+    & button {
+        margin: 10px auto;
+        width: 300px;
+    }
+
+    & select {
+        margin: 10px;
+        font-size: 16px;
+        border: 2px solid rebeccapurple;
+        border-radius: 5px;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: white;
+        cursor: pointer;
+        transition: border-color 0.3s, background-color 0.3s;
+
+        &:focus {
+            border-color: #1abc9c;
+            background-color: #f0fdfa;
+        }
+
+        &:hover {
+            border-color: #8e44ad;
+        }
+    }
+
+    & .error-messages, .success-message {
+        margin: 5px auto;
+    }
+    
+    & .user-details{
+        margin: 20px 0;
+    }
+}
+
+
+

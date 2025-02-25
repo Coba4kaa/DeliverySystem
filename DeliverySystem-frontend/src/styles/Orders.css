@@ -1,0 +1,128 @@
+.my-orders-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;;
+    gap: 30px;
+    padding: 20px;
+    justify-items: start;
+
+    & button {
+        padding: 10px 20px;
+    }
+
+    & .filters-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: auto;
+        max-width: 300px;
+    }
+
+    & .create-order-button-container {
+        margin-top: 20px;
+    }
+
+    & .orders-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+
+        & .orders-list {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+}
+
+.orders-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    .order-list-item {
+        position: relative;
+    }
+
+    .order-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.3rem;
+        opacity: 0.8;
+    }
+
+    .owner-icon {
+        color: #f39c12;
+    }
+
+    .carrier-icon {
+        color: #3498db;
+    }
+}
+
+.order-list-item {
+    min-height: 220px;
+    text-align: center;
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid black;
+    transition: background-color 0.3s ease;
+
+    & p {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    &:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.01);
+    }
+}
+
+.order-list-item-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cargo-info, .transport-info {
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.filters-container label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filters-container select,
+.filters-container input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #2c3e50;
+    font-size: 14px;
+}
+
+.filters-container input {
+    min-width: 200px;
+}
+
+.filters-container input[type="number"] {
+    width: 100px;
+}
+
+.filters-container input[type="text"] {
+    width: 150px;
+}
+
+.filters-container input[type="range"] {
+    width: 150px;
+}
+
+.create-order-container, .order-details {
+    & input {
+        margin: 8px;
+    }
+}

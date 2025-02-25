@@ -1,0 +1,36 @@
+.requests-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    padding: 20px;
+    justify-items: start;
+    
+    & button {
+        padding: 10px 20px;
+    }
+    
+    & .filters-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    & .create-order-button-container {
+        margin-top: 20px;
+    }
+    
+    & .orders-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        
+        & .orders-list {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.order-info {
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: #e0f7fa;
+    border-radius: 15px;
+    border: 3px solid #2c3e50;
+    text-align: left;
+
+    & h3 {
+        grid-column: 1 / -1;
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    
+    & p {
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        color: #555;
+        margin: 10px 0;
+        border: 2px solid #2c3e50;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    
+    & .order-info__text{
+        grid-column: 1 / 3;
+    }
+
+    & strong {
+        color: #2c3e50;
+    }
+
+    & a {
+        text-decoration: none;
+        color: #2c3e50;
+
+        &:hover {
+            color: #1abc9c;
+            font-weight: bold;
+        }
+    }
+
+    & .cargo-transport-info {
+        grid-column: 3 / 4;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    & .address-fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    & .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    & .error-messages, .success-message {
+        grid-column: 1 / -1;
+    }
+
+    & button {
+        margin-top: 10px;
+    }
+}
